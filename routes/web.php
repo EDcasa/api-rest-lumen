@@ -14,3 +14,8 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+$app->group(['prefix' => 'libros/'], function($app){
+	$app->get('/','LibrosController@listaLibros');
+});
+
