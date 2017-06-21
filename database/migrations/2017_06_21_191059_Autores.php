@@ -13,7 +13,16 @@ class Autores extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('autores', function(Blueprint $table){
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('apellido_paterno');
+            $table->string('apellido_materno');
+            $table->integer('id_libro')->unsigned();
+            $table->foreign('id')->references('id')->on('libros');
+            $table->string('edicion');
+            $table->timestamps();
+        });
     }
 
     /**
