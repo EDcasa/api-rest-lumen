@@ -18,9 +18,8 @@ class Autores extends Migration
             $table->string('nombre');
             $table->string('apellido_paterno');
             $table->string('apellido_materno');
-            $table->integer('id_libro')->unsigned();
-            $table->foreign('id')->references('id')->on('libros');
-            $table->string('edicion');
+            $table->date('fecha_nacimiento');
+            $table->string('pais_origen');
             $table->timestamps();
         });
     }
