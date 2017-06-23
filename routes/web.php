@@ -17,5 +17,7 @@ $app->get('/', function () use ($app) {
 
 $app->group(['prefix' => 'libros/'], function($app){
 	$app->get('/','LibrosController@listaLibros');
+	$app->get('/autores','LibrosController@listaAutores');
+	$app->get('/obras','LibrosController@listaAutoresLibros');
 });
 
