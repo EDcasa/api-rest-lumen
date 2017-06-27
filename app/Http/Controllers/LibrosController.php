@@ -64,7 +64,23 @@ class LibrosController extends Controller
 		if($responseRegistroAutor == true){
 		   return response()->json($responseRegistroAutor, 200);
 		}elseif($responseRegistroLibro == false){
-		   return response()->json($responseRegistroAutor, 200);
+		   return response()->json($responseRegistroAutor, 201);
 		}
+	}
+
+	public function eliminaAutores(Request $request, $id)
+	{
+		$eliminaAutor = Autores::findOrFail($id);
+		$eliminaAutor->delete();
+
+		return response()->json($eliminaAutor,200);
+	}
+
+	public function eliminaLibros(Request $request, $id)
+	{
+		$eliminaLibro = Libros::findOrFail($id);
+		$eliminaLibro->delete();
+
+		return response()->json($eliminaLibro,200);
 	}
 }

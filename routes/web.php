@@ -22,5 +22,8 @@ $app->group(['prefix' => 'api/'], function($app){
 
 	$app->post('/registro-libro','LibrosController@registraLibros');
 	$app->post('/registro-autor','LibrosController@registraAutores');
+
+	$app->delete('/elimina-libro/{id}','LibrosController@eliminaLibros');
+	$app->delete('/elimina-autor/{id}','LibrosController@eliminaAutores');
 });
 
