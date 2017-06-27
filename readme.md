@@ -11,3 +11,6 @@
 * si marcar error al abrir el proyecto, ejecutar php artisan key:generate
 * configurar la base de datos
 * ejecutar las migraciones
+
+## Uso
+* puedes utilizar POSTMAN o cualquier otro cliente, para realizar las peticiones y ver los resultados. 
