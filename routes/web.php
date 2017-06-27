@@ -21,5 +21,6 @@ $app->group(['prefix' => 'api/'], function($app){
 	$app->get('/obras','LibrosController@listaAutoresLibros');
 
 	$app->post('/registro-libro','LibrosController@registraLibros');
+	$app->post('/registro-autor','LibrosController@registraAutores');
 });
 

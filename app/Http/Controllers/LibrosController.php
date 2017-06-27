@@ -49,6 +49,22 @@ class LibrosController extends Controller
 		}elseif($responseRegistroLibro == false){
 		   return response()->json($responseRegistroLibro, 200);
 		}
+	}
 
+	public function registraAutores(Request $request)
+	{
+		$registroAutor = new Autores();
+		$registroAutor->nombre = $request->input("nombre");
+		$registroAutor->apellido_paterno = $request->input("apellido_paterno");
+		$registroAutor->apellido_materno = $request->input("apellido_materno");
+		$registroAutor->fecha_nacimiento = $request->input("fecha_nacimiento");
+		$registroAutor->pais_origen = $request->input("pais_origen");
+		$responseRegistroAutor = $registroAutor->save();
+
+		if($responseRegistroAutor == true){
+		   return response()->json($responseRegistroAutor, 200);
+		}elseif($responseRegistroLibro == false){
+		   return response()->json($responseRegistroAutor, 200);
+		}
 	}
 }
