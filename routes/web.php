@@ -25,5 +25,8 @@ $app->group(['prefix' => 'api/'], function($app){
 
 	$app->delete('/elimina-libro/{id}','LibrosController@eliminaLibros');
 	$app->delete('/elimina-autor/{id}','LibrosController@eliminaAutores');
+
+	$app->put('/edita-libro/{id}','LibrosController@editaLibros');
+	$app->put('/edita-autor/{id}','LibrosController@editaAutores');
 });
 

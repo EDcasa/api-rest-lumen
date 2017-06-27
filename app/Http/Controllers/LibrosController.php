@@ -83,4 +83,29 @@ class LibrosController extends Controller
 
 		return response()->json($eliminaLibro,200);
 	}
+
+	public function editaLibros(Request $request, $id)
+	{
+		$editaLibro = Libros::findOrFail($id);
+		$editaLibro->titulo = $request->input("titulo");
+		$editaLibro->editorial = $request->input("editorial");
+		$editaLibro->anio_publicacion = $request->input("anio_publicacion");
+		$editaLibro->edicion = $request->input("editorial");
+		$editaLibro->save();
+
+		return response()->json($editaLibro, 200);
+	}
+
+	public function editaAutores(Request $request, $id)
+	{
+		$editaAutor = Autor::findOrFail($id);
+		$editaAutor->titulo = $request->input("nombre");
+		$editaAutor->editorial = $request->input("apellido_materno");
+		$editaAutor->anio_publicacion = $request->input("fecha_nacimiento");
+		$editaAutor->edicion = $$request->input("pais_origen");
+		$editaAutor->save();
+
+		return response()->json($editaAutor, 200);
+
+	}
 }
