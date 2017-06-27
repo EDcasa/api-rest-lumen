@@ -15,9 +15,11 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
-$app->group(['prefix' => 'libros/'], function($app){
+$app->group(['prefix' => 'api/'], function($app){
 	$app->get('/','LibrosController@listaLibros');
 	$app->get('/autores','LibrosController@listaAutores');
 	$app->get('/obras','LibrosController@listaAutoresLibros');
+
+	$app->post('/registro-libro','LibrosController@registraLibros');
 });
 

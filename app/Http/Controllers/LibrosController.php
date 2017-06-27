@@ -34,4 +34,21 @@ class LibrosController extends Controller
 		->get();
 		return response()->json($select_libros_autores);
 	}
+
+	public function registraLibros(Request $request)
+	{
+		$registroLibro = new Libros();
+		$registroLibro->titulo = $request->input("titulo");
+		$registroLibro->editorial = $request->input("editorial");
+		$registroLibro->año_publicacion = $request->input("año-publicacion");
+		$registroLibro->edicion = $request->input("edicion");
+		$responseRegistroLibro = $registroLibro->save();
+
+		if($responseRegistroLibro == true){
+		   return response()->json($responseRegistroLibro, 200);
+		}elseif($responseRegistroLibro == false){
+		   return response()->json($responseRegistroLibro, 200);
+		}
+
+	}
 }
