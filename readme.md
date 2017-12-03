@@ -1,6 +1,6 @@
 <p align="center"><img src="http://www.tisuchi.com/wp-content/uploads/2016/07/lumen-install.png"></p>
 
-# API - rest en Lumen 5.3 (api rest in lumen 5.3)
+# API - rest en Lumen 5.3 (REST API with Lumen 5.3)
 
 * proyecto con funciones básicas para crear, actualizar, modificar, eliminar. (CRUD)
 
