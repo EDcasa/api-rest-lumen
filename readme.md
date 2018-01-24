@@ -1,4 +1,4 @@
-<p align="center"><img src="http://www.tisuchi.com/wp-content/uploads/2016/07/lumen-install.png"></p>
+<p align="center"><img src="https://mytechvalley.files.wordpress.com/2017/04/create-restful-api-lumen.png?w=640"></p>
 
 # API - rest en Lumen 5.3 (REST API with Lumen 5.3)
 
