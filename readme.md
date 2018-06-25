@@ -7,10 +7,11 @@
 ## Instalación
 
 * clonar el proyecto
-* ejecutar composer install
-* si marcar error al abrir el proyecto, ejecutar php artisan key:generate
-* configurar la base de datos .env
-* ejecutar las migraciones
+* ejecutar en *terminal*: 
+* `composer install`
+* `php artisan key:generate`
+* configurar la base de datos `.env`
+* `php artisan migrate`
 
 ## Uso
-* puedes utilizar POSTMAN o cualquier otro cliente, para realizar las peticiones y ver los resultados. 
+* puedes utilizar POSTMAN o cualquier otro cliente, para realizar acciones (GET,POST,PUT,DELETE) en cada `endpoint` y ver los resultados. 
