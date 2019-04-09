@@ -97,12 +97,14 @@ class LibrosController extends Controller
 	}
 
 	public function editaAutores(Request $request, $id)
+
 	{
-		$editaAutor = Autor::findOrFail($id);
-		$editaAutor->titulo = $request->input("nombre");
-		$editaAutor->editorial = $request->input("apellido_materno");
-		$editaAutor->anio_publicacion = $request->input("fecha_nacimiento");
-		$editaAutor->edicion = $$request->input("pais_origen");
+		$editaAutor = Autores::findOrFail($id);
+		$editaAutor->nombre = $request->input("nombre");
+		$editaAutor->apellido_paterno = $request->input("apellido_paterno");
+		$editaAutor->apellido_materno = $request->input("apellido_materno");
+		$editaAutor->fecha_nacimiento = $request->input("fecha_nacimiento");
+		$editaAutor->pais_origen = $request->input("pais_origen");
 		$editaAutor->save();
 
 		return response()->json($editaAutor, 200);
